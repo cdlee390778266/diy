@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Document</title>
+  <style>
+      .box{
+        width: 300px;
+        height: 300px;
+        margin-top: 200px;
+        margin-left: auto;
+        margin-right: auto; 
+        transform-style: preserve-3d;
+        transform-origin : 150px 150px 150px;
+        transform:rotateX(10deg) rotateY(10deg);
+        animation : run 10s linear infinite;
+        color: #fff;
+        line-height: 300px;
+        text-align: center;
+        font-size: 80px;
+        position: relative;
+      }
+
+      @keyframes run{
+        from{transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+        to {transform:rotateX(370deg) rotateY(360deg) rotateZ(360deg);}
+      }
+
+      .box div{
+        position: absolute;
+        width: 300px;
+        height: 300px;
+      }
+      .box:after{
+        content: '';
+        display: block;
+        width: 300px;
+        height: 300px;
+        border : 5px dashed #000;
+        border-radius: 50%;
+        transform : translate3d(0px,0px,150px) rotateX(90deg);
+      }
+      .box:before{
+        content: '';
+        display: block;
+        width: 300px;
+        height: 300px;
+        border : 5px dashed #000;
+        border-radius: 50%;
+        position: absolute;
+        transform : translateZ(150px);
+      }
+      .forword{
+        background: rgba(255,0,0,0.2);
+      }
+      .up{
+        background: rgba(0,255,0,0.2);
+        transform-origin : top;
+        transform :rotateX(90deg);
+      }
+      .down{
+        background: rgba(0,0,255,0.2);
+        transform-origin : bottom;
+        transform :rotateX(-90deg);
+      }
+      .left{
+        background: rgba(255,255,0,0.2);
+        transform-origin : left;
+        transform :rotateY(-90deg);
+      }
+      .right{
+        background: rgba(0,255,255,0.2);
+        transform-origin : right;
+        transform :rotateY(90deg);
+      }
+      .back{
+        background: rgba(255,0,255,0.2);
+        
+        transform:translateZ(300px);
+      }
+      
+
+  </style>
+</head>
+<body>
+  
+  <div class="box">
+    <div class="forword">前</div>
+    <div class="back">后</div>
+    <div class="left">左</div>
+    <div class="right">右</div>
+    <div class="up">上</div>
+    <div class="down">下</div>
+  </div>
+
+
+
+
+</body>
+</html>
