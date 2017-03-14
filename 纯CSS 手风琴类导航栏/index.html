@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>手风琴类导航栏</title>
+    <script src="jquery.js">
+
+    </script>
+    <style type="text/css">
+      #indexText{
+        /*border: 1px red solid;*/
+        width: 1300px;
+        height: 400px;
+        position: absolute;
+        line-height: 40px;
+        font-size: 16px;
+        left: 50%;
+        top:50%;
+        margin-top: -200px;
+        transition: .5s linear;
+        -webkit-transition: .5s linear;
+        -moz-transition: .5s linear;
+        -ms-transition: .5s linear;
+        z-index: 100;
+        overflow: hidden;
+      }
+      #indexTextHeader{
+        width: 100%;
+        height: 10%;
+        font-size: 20px;
+        font-weight: 900;
+        text-align: center;
+      }
+      #indexTextWarp{
+        width: 80%;
+        height: 80%;
+        margin: 10px auto;
+        border: 3px #6f3a13 solid;
+        overflow: hidden;
+      }
+      .TextWarpHover{
+        height: 100%;
+        float: left;
+        width: 6.5%;
+        background-image: -webkit-linear-gradient(top,#e68239 0%,transparent  2%,transparent 98%,#e68239 100%);
+        background-size: 100% 100%;
+            transition:all 1s ease-in-out;
+            -moz-transition:all 1s ease-in-out;
+            -webkit-transition:all 1s ease-in-out;
+            -ms-transition:all 1s ease-in-out;
+            /*-o-transition:all 1s ease-in-out;*/
+      }
+      #indexTextWarp .TextWarpHover:hover{
+        width: 87%;
+      }
+      .indexTextWarp1_h{
+        width: 61px;
+        height: 100%;
+        background: #f07a24;
+        color: white;
+        border-right:2px #e87826 solid;
+        font-size: 50px;
+        line-height: 70px;
+        text-align: center;
+        float: left;
+        box-shadow: 2px 0px 10px gray,
+              2px 0px 20px black;
+      }
+      .indexTextWarp4{
+        line-height: 150px;
+        width: 80%;
+        height: 100%;
+        text-align: center;
+        float: right;
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="indexText" style="margin-left: -650px;">
+    <!-- 割一下 -->
+    <div id="indexTextHeader">个人简介</div>
+    <div id="indexTextWarp">
+      <div class="indexTextWarp1 TextWarpHover">
+        <div class="indexTextWarp1_h">基本介绍</div>
+        <div class="indexTextWarp1_t" style="padding-left: 30%;">
+          姓名:XXX<br/>
+          性别:X<br/>
+          出生:XXXX-XX-XX<br/>
+          血型:X;<br />
+        </div>
+      </div>
+      <!-- 割一下 -->
+      <div class="indexTextWarp2 TextWarpHover">
+        <div class="indexTextWarp1_h">学习经历</div>
+        <div class="indexTextWarp1_t" style="padding-left: 30%;">
+          XXXXXXXXXXXXXXX<br/>
+          XXXXXXXXXXXXXXX<br/>
+          XXXXXXXXXXXXXXX<br/>
+          XXXXXXXXXXXXXXX<br />
+        </div>
+      </div>
+      <!-- 割一下 -->
+      <div class="indexTextWarp3 TextWarpHover">
+        <div class="indexTextWarp1_h">工作经历</div>
+        <div class="indexTextWarp1_t" style="padding-left: 10%;width: 80%;">
+          XXXXXXX/XXXXX/XXXXXX<br/>
+          XXXXXX<br/>
+          XXXXXXXXXXXXXXXXXXXXXXXXXXXX<br/>
+        </div>
+      </div>
+      <!-- 割一下 -->
+      <div class="indexTextWarp4">
+        我是毒鸡汤<br/>
+        真的是毒鸡汤<br />
+      </div>
+    </div>
+
+
+  </body>
+</html>s

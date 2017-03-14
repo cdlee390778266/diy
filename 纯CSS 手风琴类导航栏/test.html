@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>手风琴类导航栏</title>
+  <style>
+    body,html{
+      position: relative;
+      height: 100%;
+      padding: 0;
+      margin:0;
+
+    }
+    .wrapper{
+      width: 800px;
+      height: 300px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -400px;
+      margin-top: -150px;
+      border:3px #6f3a13 solid;
+     
+    }
+    .wrapper *{
+      transition : all 1s;
+    }
+
+    .item{
+      display: inline-block;
+    }
+
+    .head{
+      width: 60px;
+      height: 300px;
+      line-height: 300px;
+      background: #f07a24;
+      text-align: center;
+      font-size: 50px;
+      color: #fff;
+      display: inline-block;
+      box-shadow: 2px 0px 10px gray, 2px 0px 20px black; 
+      float: left;
+    }
+    .body{
+      display: inline-block;
+      width: 0;
+      opacity: 0;
+      text-align: center;
+      background-image: -webkit-linear-gradient(top,#e68239 0%,transparent 2%,transparent 98%,#e68239 100%);
+      background-size: 100% 100%;
+      transition : all 1s ease-in-out;
+      height: 300px;
+      line-height: 300px;
+      float: left;
+    }
+    
+    .last .body{
+      /*width: 532px;
+      opacity: 1;
+      text-align: center;*/
+    }
+
+    .item:hover .body{
+        width: 548px;
+        opacity: 1;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+      <div class="item">
+        <div class="head">1</div>
+        <div class="body">1</div>
+      </div>
+      <div class="item">
+        <div class="head">2</div>
+        <div class="body">2</div>
+      </div>
+      <div class="item">
+        <div class="head">3</div>
+        <div class="body">3</div>
+      </div>
+      <div class="item last">
+        <div class="head">4</div>
+        <div class="body">4</div>
+      </div>
+
+
+  </div>
+  
+</body>
+</html>
